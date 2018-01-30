@@ -2,9 +2,9 @@ version: '3.1'
 
 services:
   aeon-docker:
-    image: aeonpocket/rpc
+    image: chakkritte/rpc
     environment:
-      - DAEMON_HOST=192.168.2.110
+      - DAEMON_HOST=103.78.158.18
       - DAEMON_PORT=11181
 
   redis:
@@ -22,7 +22,7 @@ services:
       - 27017:27017
 
   php-wallet:
-    image: aeonpocket/web-wallet
+    image: chakkritte/web-wallet
     depends_on:
       - mongo
       - aeon-docker
